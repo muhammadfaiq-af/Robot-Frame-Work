@@ -14,4 +14,10 @@ ${login_btn}=    css=[id=login-button]
 
 ${products}=    Products
 
-${assertion1}=    Swag Labs
+${landingpageasert}=    css=.login_logo
+${landingpageaserttext}=    Swag Labs
+
+
+
+${assertion1}=    css=.app_logo
+${assertion1text}=    Swag Labs

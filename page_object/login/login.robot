@@ -1,12 +1,11 @@
 *** Settings ***
 Library  Selenium2Library
-Resource    ../../variables/variable.robot
+Resource    ../../Resource/variable.robot
 Resource    ../../Resource/common.robot
 *** Keywords ***
+redirected to landing page    
 
-login to the website
-
-    type    element=${id_locator}    text=${id}
-    Input Password    locator=${password_locator}   password=${password}
-    click    element=${login_btn}
-    Page Should Contain    text=${products}
+    Open Browser    url=${url}     browser=${chrome}
+    Maximize Browser Window
+    Page Should Contain    text=${assertion1}
+    Sleep    2s
