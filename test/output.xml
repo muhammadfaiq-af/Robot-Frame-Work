@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.1 on win32)" generated="2024-07-12T17:53:13.795660" rpa="false" schemaversion="5">
+<suite id="s1" name="Homepage" source="C:\Users\lenovo\Desktop\Robot-Frame-Work\test\homepage.robot">
+<test id="s1-t1" name="Veify that the user is able to login with valid credientials" line="7">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2024-07-12T17:53:14.075606" level="INFO">Opening browser 'firefox' to base url 'None'.</msg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-12T17:53:14.075606" elapsed="6.224892"/>
+</kw>
+<kw name="login to the website" owner="home">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2024-07-12T17:53:20.318092" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com'.</msg>
+<arg>url=${url}</arg>
+<arg>browser=${chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-12T17:53:20.318092" elapsed="2.447842"/>
+</kw>
+<kw name="type" owner="common">
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2024-07-12T17:53:22.770439" level="INFO">Typing text 'standard_user' into text field 'css=[id=user-name]'.</msg>
+<msg time="2024-07-12T17:53:23.824772" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-12T17:53:23.824772" level="FAIL">Element with locator 'css=[id=user-name]' not found.</msg>
+<arg>locator=${element}</arg>
+<arg>text=${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2024-07-12T17:53:22.765934" elapsed="1.061359">Element with locator 'css=[id=user-name]' not found.</status>
+</kw>
+<arg>element=${id_locator}</arg>
+<arg>text=${id}</arg>
+<status status="FAIL" start="2024-07-12T17:53:22.765934" elapsed="1.061359">Element with locator 'css=[id=user-name]' not found.</status>
+</kw>
+<kw name="Input Password" owner="Selenium2Library">
+<arg>locator=${password_locator}</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-07-12T17:53:23.827293" elapsed="0.000000"/>
+</kw>
+<kw name="click" owner="common">
+<arg>element=${login_btn}</arg>
+<status status="NOT RUN" start="2024-07-12T17:53:23.827293" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain" owner="Selenium2Library">
+<arg>text=${products}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2024-07-12T17:53:23.827293" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-12T17:53:20.318092" elapsed="3.509201">Element with locator 'css=[id=user-name]' not found.</status>
+</kw>
+<kw name="Close Browser" owner="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-07-12T17:53:23.830309" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-07-12T17:53:14.075606" elapsed="9.754703">Element with locator 'css=[id=user-name]' not found.</status>
+</test>
+<status status="FAIL" start="2024-07-12T17:53:13.805546" elapsed="10.024763"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Homepage">Homepage</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
